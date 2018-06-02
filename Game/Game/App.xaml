@@ -11,6 +11,7 @@
                     <viewmodel:MainViewModels x:Key="Main"/>
                 </ResourceDictionary>
                 <ResourceDictionary Source="Style/Window.xaml"/>
+                <ResourceDictionary Source="Style/PlaceHolder.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Game">
+    <Style TargetType="Window" x:Key="MainWindowStyle">
+        <Setter Property="Background" Value="Black" />
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome CaptionHeight="0"
+            CornerRadius="2"
+            GlassFrameThickness="0"
+            NonClientFrameEdges="Top"
+            ResizeBorderThickness="3"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

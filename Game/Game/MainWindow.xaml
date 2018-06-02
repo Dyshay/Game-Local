@@ -7,13 +7,14 @@
         xmlns:viewmodel="clr-namespace:Game.ViewModels"
         xmlns:local="clr-namespace:Game"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" DataContext="{StaticResource Main}" WindowState="Maximized" Background="Black" Style="{DynamicResource MainWindowStyle}">
     <Window.Resources>
         <DataTemplate DataType="{x:Type viewmodel:HomeViewModel}">
             <view:HomeView/>
         </DataTemplate>
     </Window.Resources>
-    <Grid>
+    <Grid Background="Black">
+            <Image Source="http://hdwallpaperfx.com/wp-content/uploads/2015/10/anonymous-wallpaper.jpg"/>
         <ContentControl Content="{Binding CurrentView}"></ContentControl>
     </Grid>
 </Window>

@@ -5,6 +5,13 @@
              xmlns:viewmodel="clr-namespace:Game.ViewModels"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <viewmodel:MainViewModels x:Key="Main"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <viewmodel:MainViewModels x:Key="Main"/>
+                </ResourceDictionary>
+                <ResourceDictionary Source="Style/Window.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

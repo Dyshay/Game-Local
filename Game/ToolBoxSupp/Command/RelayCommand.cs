@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ToolBoxSupp.Command;
 
-namespace MVVM.Command
+namespace ToolBoxSupp.Command
 {
     public class RelayCommand : ICommand
     {

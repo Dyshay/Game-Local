@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using ToolBoxSupp.Command;
 
-namespace ViewModelBase
+namespace ToolBoxSupp
 {
     public class ViewModelBase : INotifyPropertyChanged
     {

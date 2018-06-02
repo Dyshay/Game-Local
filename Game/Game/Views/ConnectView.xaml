@@ -5,8 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Game.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" >
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBox Style="{StaticResource placeHolder}" Tag="      Pseudo"/>
+            <TextBox Grid.Column="1" Style="{StaticResource placeHolder}" Tag=" Mot de passe"/>
+        </Grid>
+        <Button Grid.Row="2" Content="Connexion" Margin="30" FontSize="50"/>
     </Grid>
 </UserControl>

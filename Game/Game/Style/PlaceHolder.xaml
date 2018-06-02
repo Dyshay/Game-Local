@@ -17,6 +17,7 @@
                             <TextBox.Style>
                                 <Style TargetType="{x:Type TextBox}">
                                     <Setter Property="Foreground" Value="Transparent"/>
+                                    <Setter Property="FontSize" Value="50"/>
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
                                             <Setter Property="Foreground" Value="Gray"/>

@@ -18,7 +18,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Content="Connexion" Margin="20"/>
+            <Button Content="Connexion" Margin="20" Command="{Binding ConnectBtn}" />
             <Button Content="Inscription" Grid.Column="1" Margin="20"/>
         </Grid>
     </Grid>

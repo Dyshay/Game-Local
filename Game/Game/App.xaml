@@ -9,6 +9,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <viewmodel:MainViewModels x:Key="Main"/>
+                    <viewmodel:ConnectViewModel x:Key="Connect"/>
                 </ResourceDictionary>
                 <ResourceDictionary Source="Style/Window.xaml"/>
                 <ResourceDictionary Source="Style/PlaceHolder.xaml"/>

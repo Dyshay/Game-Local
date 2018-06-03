@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:helper="clr-namespace:Game.Helper"
              xmlns:local="clr-namespace:Game.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" >
+             d:DesignHeight="450" d:DesignWidth="800" DataContext="{StaticResource Connect}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -18,16 +19,16 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel>
-                <Label Content="Pseudo" Style="{DynamicResource LabelModificator}"/> 
-                <TextBox Tag="Pseudo" Style="{DynamicResource TextBox}"/>
+                <Label Content="Pseudo" Style="{DynamicResource LabelModificator}"/>
+                <TextBox Text="{Binding Pseudo, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBox}"/>
             </StackPanel>
             <StackPanel Grid.Column="2">
                 <Label Content="Password" Style="{DynamicResource LabelModificator}"/>
-                <PasswordBox Grid.Column="1" Tag=" Mot de passe" Style="{DynamicResource PasswordBox}"/>
+                <PasswordBox Grid.Column="1" Style="{DynamicResource PasswordBox}" helper:PasswordBoxHelper.Attach="True" helper:PasswordBoxHelper.Password="{Binding Path=Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
                 
                 
         </Grid>
-        <Button Grid.Row="2" Content="Connexion" Style="{DynamicResource BoutonStyle}" Margin="70"/>
+        <Button Grid.Row="2" Content="Connexion" Style="{DynamicResource BoutonStyle}" Margin="70" Command="{Binding ConnectBtn}"/>
     </Grid>
 </UserControl>

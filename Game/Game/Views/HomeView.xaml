@@ -19,7 +19,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Button Content="Connexion" Command="{Binding ConnectBtn}" Style="{DynamicResource BoutonStyle}"/>
-            <Button Content="Inscription" Grid.Column="1" Style="{DynamicResource BoutonStyle}"/>
+            <Button Content="Inscription" Command="{Binding RegisterBtn}" Grid.Column="1" Style="{DynamicResource BoutonStyle}"/>
         </Grid>
     </Grid>
 </UserControl>

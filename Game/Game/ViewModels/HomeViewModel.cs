@@ -21,5 +21,15 @@ namespace Game.ViewModels
         {
             Mediator<NavigationPage>.Instance.Send(new ConnectViewModel());
         }
+        private ICommand _RegisterBtn;
+        public ICommand RegisterBtn
+        {
+            get { return _RegisterBtn ?? (_RegisterBtn = new RelayCommand(RegisterExec)); }
+        }
+
+        private void RegisterExec()
+        {
+            Mediator<NavigationPage>.Instance.Send(new RegisterViewModel());
+        }
     }
 }

@@ -24,5 +24,10 @@ namespace Game
         {
             InitializeComponent();
         }
+
+        private void Boutton(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

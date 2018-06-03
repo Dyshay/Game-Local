@@ -18,12 +18,12 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel>
-                <Label Content="Pseudo" Foreground="White"/> 
-                <TextBox Tag="Pseudo" HorizontalContentAlignment="Center" FontSize="50" Margin="20"/>
+                <Label Content="Pseudo" Style="{DynamicResource LabelModificator}"/> 
+                <TextBox Tag="Pseudo" Style="{DynamicResource TextBox}"/>
             </StackPanel>
             <StackPanel Grid.Column="2">
-                <Label Content="Password" Foreground="White"/>
-                <TextBox Grid.Column="1" Tag=" Mot de passe" Margin="20" FontSize="50"/>
+                <Label Content="Password" Style="{DynamicResource LabelModificator}"/>
+                <PasswordBox Grid.Column="1" Tag=" Mot de passe" Style="{DynamicResource PasswordBox}"/>
             </StackPanel>
                 
                 

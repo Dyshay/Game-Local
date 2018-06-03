@@ -29,6 +29,6 @@
                 
                 
         </Grid>
-        <Button Grid.Row="2" Content="Connexion" Style="{DynamicResource BoutonStyle}" Margin="70" Command="{Binding ConnectBtn}"/>
+        <Button Grid.Row="2" Content="Connexion" Style="{StaticResource BoutonStyle2}" Command="{Binding ConnectBtn}"/>
     </Grid>
 </UserControl>

@@ -7,7 +7,7 @@
         xmlns:viewmodel="clr-namespace:Game.ViewModels"
         xmlns:local="clr-namespace:Game"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" DataContext="{StaticResource Main}" WindowState="Maximized" Background="Black" Style="{DynamicResource MainWindowStyle}">
+        Title="MainWindow" Height="450" Width="800" DataContext="{StaticResource Main}" WindowStyle="None" ResizeMode="CanMinimize" WindowState="Maximized" Background="Black">
     <Window.Resources>
         <DataTemplate DataType="{x:Type viewmodel:HomeViewModel}">
             <view:HomeView/>

@@ -19,21 +19,21 @@
             </Grid.ColumnDefinitions>
             <StackPanel>
                 <Label Content="Pseudo" Style="{StaticResource LabelModificator}" />
-                <TextBox Margin="35" FontSize="30" Text="{Binding Pseudo,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Text="{Binding Pseudo,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBox}"/>
              </StackPanel>
             <StackPanel Grid.Column="1">
                 <Label Content="Password" Style="{StaticResource LabelModificator}"/>
-                <TextBox Margin="35" Grid.Column="1" FontSize="30" Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBox}"/>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
             <StackPanel>
                 <Label Content="Email" Style="{StaticResource LabelModificator}"/>
-                <TextBox Margin="35" FontSize="30" Text="{Binding Email,UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox Style="{StaticResource TextBox}" Text="{Binding Email,UpdateSourceTrigger=PropertyChanged}"/>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="3">
-            <Button FontSize="30" Content="Valider" Margin="35" Command="{Binding ValiderInscription}"/>
+            <Button  Content="Valider"  Command="{Binding ValiderInscription}" Style="{StaticResource BoutonStyle2}"/>
         </Grid>
         
             

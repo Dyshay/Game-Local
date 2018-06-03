@@ -12,6 +12,7 @@
                                                 UpdateSourceTrigger=PropertyChanged}"
                                  x:Name="textSource" 
                                  Background="Transparent" 
+                                 Margin="50"
                                  Panel.ZIndex="2" />
                         <TextBox Text="{TemplateBinding Tag}" Background="{TemplateBinding Background}" Panel.ZIndex="1">
                             <TextBox.Style>
@@ -21,6 +22,9 @@
                                     <Style.Triggers>
                                         <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
                                             <Setter Property="Foreground" Value="Gray"/>
+                                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                                            <Setter Property="Margin" Value="50"/>
                                         </DataTrigger>
                                     </Style.Triggers>
                                 </Style>

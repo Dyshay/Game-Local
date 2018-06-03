@@ -12,13 +12,21 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="1" Margin="40">
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBox Style="{StaticResource placeHolder}" Tag="      Pseudo"/>
-            <TextBox Grid.Column="1" Style="{StaticResource placeHolder}" Tag=" Mot de passe"/>
+            <StackPanel>
+                <Label Content="Pseudo" Foreground="White"/> 
+                <TextBox Tag="Pseudo" HorizontalContentAlignment="Center" FontSize="50" Margin="20"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2">
+                <Label Content="Password" Foreground="White"/>
+                <TextBox Grid.Column="1" Tag=" Mot de passe" Margin="20" FontSize="50"/>
+            </StackPanel>
+                
+                
         </Grid>
         <Button Grid.Row="2" Content="Connexion" Margin="30" FontSize="50"/>
     </Grid>

@@ -12,7 +12,7 @@
                     <viewmodel:ConnectViewModel x:Key="Connect"/>
                 </ResourceDictionary>
                 <ResourceDictionary Source="Style/Window.xaml"/>
-                <ResourceDictionary Source="Style/PlaceHolder.xaml"/>
+                <ResourceDictionary Source="Style/Bouton.xaml"/>
                 <ResourceDictionary Source="Style/Label.xaml"/>
                 <ResourceDictionary Source="Style/TextBoxFormat.xaml"/>
                 <ResourceDictionary Source="Style/PasswordBox.xaml"/>

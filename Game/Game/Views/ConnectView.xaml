@@ -28,6 +28,6 @@
                 
                 
         </Grid>
-        <Button Grid.Row="2" Content="Connexion" Margin="30" FontSize="50"/>
+        <Button Grid.Row="2" Content="Connexion" Style="{DynamicResource BoutonStyle}" Margin="70"/>
     </Grid>
 </UserControl>

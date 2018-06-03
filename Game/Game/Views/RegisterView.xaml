@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Game.Views"
+             xmlns:helper="clr-namespace:Game.Helper"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -23,7 +24,7 @@
              </StackPanel>
             <StackPanel Grid.Column="1">
                 <Label Content="Password" Style="{StaticResource LabelModificator}"/>
-                <TextBox Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBox}"/>
+                <PasswordBox helper:PasswordBoxHelper.Attach="True" helper:PasswordBoxHelper.Password="{Binding Path=Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource PasswordBox}"/>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
@@ -33,7 +34,7 @@
             </StackPanel>
         </Grid>
         <Grid Grid.Row="3">
-            <Button  Content="Valider"  Command="{Binding ValiderInscription}" Style="{StaticResource BoutonStyle2}"/>
+            <Button  Content="Valider"  Command="{Binding SubmitRegister}" Style="{StaticResource BoutonStyle2}"/>
         </Grid>
         
             

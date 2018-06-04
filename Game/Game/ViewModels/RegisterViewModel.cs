@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Game.Models.Client.Entity;
+using Game.Models.Client.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ToolBox.Patterns.MVVM.Commands;
+using ToolBoxSupp.Command;
 using ToolBoxSupp.Mediator;
 
 namespace Game.ViewModels
@@ -51,6 +53,9 @@ namespace Game.ViewModels
 
         private void SubmitRegisterExec()
         {
+            Users NewUser = new Users(Pseudo, Password, Email, Locator.Instance.GenerateIP.GenerateIPt(), 0, 1);
+            UsersService User = new UsersService();
+            User.Insert(NewUser);
             Mediator<NavigationPage>.Instance.Send(new HomeViewModel());
         }
     }

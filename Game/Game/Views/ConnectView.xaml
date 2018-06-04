@@ -6,7 +6,7 @@
              xmlns:helper="clr-namespace:Game.Helper"
              xmlns:local="clr-namespace:Game.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" DataContext="{StaticResource Connect}">
+             d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

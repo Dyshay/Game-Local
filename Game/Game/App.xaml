@@ -10,6 +10,7 @@
                 <ResourceDictionary>
                     <viewmodel:MainViewModels x:Key="Main"/>
                     <viewmodel:ConnectViewModel x:Key="Connect"/>
+                    <viewmodel:RegisterViewModel x:Key="Register"/>
                 </ResourceDictionary>
                 <ResourceDictionary Source="Style/Window.xaml"/>
                 <ResourceDictionary Source="Style/Bouton.xaml"/>
@@ -17,6 +18,7 @@
                 <ResourceDictionary Source="Style/TextBoxFormat.xaml"/>
                 <ResourceDictionary Source="Style/PasswordBox.xaml"/>
                 <ResourceDictionary Source="Style/BoutonSecond.xaml"/>
+                <ResourceDictionary Source="Style/LabelGame.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

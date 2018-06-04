@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Game.Models.Client.Entity;
+using Game.Models.Client.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using ToolBoxSupp.Command;
 using ToolBoxSupp.Mediator;
 
@@ -44,7 +47,28 @@ namespace Game.ViewModels
 
         private void ConnectExec()
         {
-            Mediator<NavigationPage>.Instance.Send(new GameViewModel());
+            UsersService UserS = new UsersService();
+            Users UserRecup = UserS.Get(Pseudo);
+
+            if(UserRecup == null)
+            {
+                MessageBox.Show("Pseudo ou mot de passe incorrect");
+                Pseudo = "";
+                Password = "";
+            }
+            else
+            {
+                if (UserRecup.Pseudo == Pseudo && UserRecup.Password == Password)
+                {
+                    Mediator<NavigationPage>.Instance.Send(new GameViewModel(UserRecup));
+                }
+                else
+                {
+                    MessageBox.Show("Pseudo ou mot de passe incorrect"); ;
+                    Pseudo = "";
+                    Password = "";
+                }
+            }
             // Rajouter le model qui permettra de récuperer les infos en db pour évalué la connexion si l'utilisateur existe bien
         }
     }

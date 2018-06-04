@@ -57,10 +57,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GenerationIP.cs" />
     <Compile Include="Helper\PasswordBoxHelper.cs" />
+    <Compile Include="Models\Client\Entity\Users.cs" />
+    <Compile Include="Models\Client\Mapper\UsersMapper.cs" />
+    <Compile Include="Models\Client\Services\ServiceClientLocator.cs" />
+    <Compile Include="Models\Client\Services\UsersService.cs" />
+    <Compile Include="Models\Global\Entity\Users.cs" />
+    <Compile Include="Models\Global\Mapper\UsersMapper.cs" />
+    <Compile Include="Models\Global\Services\ServiceBase.cs" />
+    <Compile Include="Models\Global\Services\ServiceGlobalLocator.cs" />
+    <Compile Include="Models\Global\Services\UsersService.cs" />
     <Compile Include="ViewModels\ConnectViewModel.cs" />
     <Compile Include="ViewModels\GameViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\Locator.cs" />
     <Compile Include="ViewModels\MainViewModels.cs" />
     <Compile Include="ViewModels\NavigationPage.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
@@ -97,6 +108,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Style\Label.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\LabelGame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,14 +170,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Client\Entity\" />
-    <Folder Include="Models\Client\Mapper\" />
-    <Folder Include="Models\Client\Services\" />
-    <Folder Include="Models\Global\Entity\" />
-    <Folder Include="Models\Global\Mapper\" />
-    <Folder Include="Models\Global\Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ToolBoxSupp\MVVM.csproj">
       <Project>{5DCE0733-CB39-4FAE-BCA9-BBEF441A6946}</Project>

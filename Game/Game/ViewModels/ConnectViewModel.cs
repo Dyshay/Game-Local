@@ -47,10 +47,9 @@ namespace Game.ViewModels
 
         private void ConnectExec()
         {
-            UsersService UserS = new UsersService();
-            Users UserRecup = UserS.Get(Pseudo);
+            Users U = ServiceClientLocator.Instance.Users.Get(Pseudo);
 
-            if(UserRecup == null)
+            if(U == null)
             {
                 MessageBox.Show("Pseudo ou mot de passe incorrect");
                 Pseudo = "";
@@ -58,9 +57,10 @@ namespace Game.ViewModels
             }
             else
             {
-                if (UserRecup.Pseudo == Pseudo && UserRecup.Password == Password)
+                if (U.Pseudo == Pseudo && U.Password == Password)
                 {
-                    Mediator<NavigationPage>.Instance.Send(new GameViewModel(UserRecup));
+                    //Mediator<NavigationPage>.Instance.Unregister(Remo)
+                    Mediator<NavigationPage>.Instance.Send(new GameViewModel(U));
                 }
                 else
                 {
@@ -69,7 +69,6 @@ namespace Game.ViewModels
                     Password = "";
                 }
             }
-            // Rajouter le model qui permettra de récuperer les infos en db pour évalué la connexion si l'utilisateur existe bien
         }
     }
 }

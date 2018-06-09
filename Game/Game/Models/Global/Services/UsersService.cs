@@ -11,46 +11,34 @@ using ToolBox.Patterns.Repository;
 
 namespace Game.Models.Global.Services
 {
-    public class UsersService : ServiceBase<string, Users>, IDataService<string,Users>
+    public class UsersService 
     {
 
-        public override IEnumerable<Users> Get()
+        public  IEnumerable<Users> Get()
         {
             Command cmd = new Command("SELECT * FROM Users");
-            return Context.ExecuteReader(cmd, MapperToGlobal);
+            return AccessLocator.Instance.Connection.ExecuteReader(cmd, c => c.ToUsers());
         }
 
-        public override Users Get(string ID)
+        public  Users Get(string ID)
         {
             Command cmd = new Command("SELECT * FROM Users WHERE Pseudo = @Pseudo ");
             cmd.AddParameter("Pseudo", ID);
-            return Context.ExecuteReader(cmd, MapperToGlobal).SingleOrDefault();
+            return AccessLocator.Instance.Connection.ExecuteReader(cmd, c => c.ToUsers()).SingleOrDefault();
         }
 
-        public override Users Insert(Users Entity)
+        public Users Insert(Users Entity)
         {
-            Command cmd = new Command("INSERT INTO Users(Pseudo,Money,IP,Password,Email) VALUES (@Pseudo,@Money,@IP,@Password,@Email)");
-            cmd.AddParameter("Pseudo", Entity.Pseudo);
+            Command cmd = new Command("Proc_Adduser", true);
+            cmd.AddParameter("Username", Entity.Pseudo);
+            cmd.AddParameter("Password", Entity.Password);
             cmd.AddParameter("Money", Entity.Money);
             cmd.AddParameter("IP", Entity.IP);
-            cmd.AddParameter("Password", Entity.Password);
             cmd.AddParameter("Email", Entity.Email);
-            Context.ExecuteNonQuery(cmd);
+
+            AccessLocator.Instance.Connection.ExecuteScalar(cmd);
             return Entity;
         }
-
-        public override bool Update(Users Entity)
-        {
-            throw new NotImplementedException();
-        }
-        public override bool Delete(string ID)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override Users MapperToGlobal(IDataRecord Data)
-        {
-            return Data.ToUsers();
-        }
+        
     }
 }

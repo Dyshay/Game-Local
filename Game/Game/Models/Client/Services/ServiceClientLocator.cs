@@ -17,10 +17,20 @@ namespace Game.Models.Client.Services
         public ServiceClientLocator()
         {
             Container.Register<UsersService>();
+            Container.Register<IconService>();
+            Container.Register<MU_IconService>();
         }
         public UsersService Users
         {
             get { return Container.GetInstance<UsersService>(); }
+        }
+        public IconService Icon
+        {
+            get { return Container.GetInstance<IconService>(); }
+        }
+        public MU_IconService MUIcon
+        {
+            get { return Container.GetInstance<MU_IconService>(); }
         }
     }
 }

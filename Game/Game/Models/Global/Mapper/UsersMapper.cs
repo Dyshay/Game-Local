@@ -16,6 +16,7 @@ namespace Game.Models.Global.Mapper
 
             return new Users()
             {
+                UserID = (int?)Data["UserID"],
                 Pseudo = (string)Data["Pseudo"],
                 Password = (string)Data["Password"],
                 Email = (string)Data["Email"],

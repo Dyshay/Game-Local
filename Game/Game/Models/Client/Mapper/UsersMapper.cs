@@ -13,12 +13,13 @@ namespace Game.Models.Client.Mapper
     {
         public static C.Users ToClient (this G.Users Entity)
         {
-            return new C.Users(Entity.Pseudo, Entity.Password, Entity.Email, Entity.IP, Entity.Money, Entity.Level);
+            return new C.Users(Entity.UserID,Entity.Pseudo, Entity.Password, Entity.Email, Entity.IP, Entity.Money, Entity.Level);
         }
         public static G.Users ToGlobal (this C.Users Entity)
         {
             return new G.Users()
             {
+                UserID = Entity.UserID,
                 Pseudo = Entity.Pseudo,
                 Password = Entity.Password,
                 Email = Entity.Email,

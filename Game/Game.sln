@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameApi", "GameApi\GameApi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM", "ToolBoxSupp\MVVM.csproj", "{5DCE0733-CB39-4FAE-BCA9-BBEF441A6946}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BaseDonneeGame", "BaseDonneeGame\BaseDonneeGame.sqlproj", "{178DFE89-5315-4EB0-9209-F34761AA8D7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,12 @@ Global
 		{5DCE0733-CB39-4FAE-BCA9-BBEF441A6946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DCE0733-CB39-4FAE-BCA9-BBEF441A6946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DCE0733-CB39-4FAE-BCA9-BBEF441A6946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178DFE89-5315-4EB0-9209-F34761AA8D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178DFE89-5315-4EB0-9209-F34761AA8D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178DFE89-5315-4EB0-9209-F34761AA8D7D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{178DFE89-5315-4EB0-9209-F34761AA8D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178DFE89-5315-4EB0-9209-F34761AA8D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{178DFE89-5315-4EB0-9209-F34761AA8D7D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

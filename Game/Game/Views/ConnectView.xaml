@@ -19,16 +19,16 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackPanel>
-                <Label Content="Pseudo" Style="{DynamicResource LabelModificator}"/>
+                <Label Content="&lt;L0gin&gt;" Style="{DynamicResource LabelModificator}"/>
                 <TextBox Text="{Binding Pseudo, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource TextBox}"/>
             </StackPanel>
             <StackPanel Grid.Column="2">
-                <Label Content="Password" Style="{DynamicResource LabelModificator}"/>
+                <Label Content="&lt;Passw0rd&gt;" Style="{DynamicResource LabelModificator}"/>
                 <PasswordBox Grid.Column="1" Style="{DynamicResource PasswordBox}" helper:PasswordBoxHelper.Attach="True" helper:PasswordBoxHelper.Password="{Binding Path=Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
             </StackPanel>
                 
                 
         </Grid>
-        <Button Grid.Row="2" Content="Connexion" Style="{StaticResource BoutonStyle2}" Command="{Binding ConnectBtn}"/>
+        <Button Grid.Row="2" Content="Connexion" Style="{StaticResource BoutonStyle2}" Command="{Binding ConnectBtn}" IsDefault="True"/>
     </Grid>
 </UserControl>

@@ -19,6 +19,7 @@
                 <ResourceDictionary Source="Style/PasswordBox.xaml"/>
                 <ResourceDictionary Source="Style/BoutonSecond.xaml"/>
                 <ResourceDictionary Source="Style/LabelGame.xaml"/>
+                <ResourceDictionary Source="Style/BoutonStyleDesktop.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

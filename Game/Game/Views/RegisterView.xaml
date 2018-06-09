@@ -34,7 +34,7 @@
             </StackPanel>
         </Grid>
         <Grid Grid.Row="3">
-            <Button  Content="Valider"  Command="{Binding SubmitRegister}" Style="{StaticResource BoutonStyle2}"/>
+            <Button  Content="Valider"  Command="{Binding SubmitRegister}" Style="{StaticResource BoutonStyle2}" IsDefault="True"/>
         </Grid>
         
             

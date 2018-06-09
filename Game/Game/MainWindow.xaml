@@ -34,7 +34,7 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="1" FontFamily="Segoe MDL2 Assets" Content="" FontSize="26" Background="#f4424b" Click="Boutton" HorizontalAlignment="Center"/>
         </Grid>
-        <Image  Grid.Row="1" Source="http://hdwallpaperfx.com/wp-content/uploads/2015/10/anonymous-wallpaper.jpg"/>
+        <Image  Grid.Row="1" Source="Img/Background.jpg"/>
             <ContentControl Grid.Row="1" Content="{Binding CurrentView}"></ContentControl>
     </Grid>
 </Window>

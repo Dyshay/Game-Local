@@ -1,0 +1,3 @@
+Petit éditeur de texte qui permettent de tapé du code c# 
+
+Celui-ci permettrait de tapé du code pour résoudre certaines énigmes

@@ -53,9 +53,8 @@ namespace Game.ViewModels
 
         private void SubmitRegisterExec()
         {
-            Users NewUser = new Users(Pseudo, Password, Email, Locator.Instance.GenerateIP.GenerateIPt(), 0, 1);
-            UsersService User = new UsersService();
-            User.Insert(NewUser);
+            ServiceClientLocator.Instance.Users.Insert(new Users(Pseudo, Password, Email, Locator.Instance.GenerateIP.GenerateIPt(),0));
+            //ServiceClientLocator.Instance
             Mediator<NavigationPage>.Instance.Send(new HomeViewModel());
         }
     }

@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[LogsInGame]
+(
+	Pseudo VARCHAR(25) NOT NULL,
+	TextLogs VARCHAR(500) NOT NULL
+
+	CONSTRAINT FK_Pseudo FOREIGN KEY (Pseudo) REFERENCES Users(Pseudo)
+)

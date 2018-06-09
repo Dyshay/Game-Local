@@ -59,15 +59,31 @@
     </ApplicationDefinition>
     <Compile Include="GenerationIP.cs" />
     <Compile Include="Helper\PasswordBoxHelper.cs" />
+    <Compile Include="Models\Client\Entity\Icon.cs" />
+    <Compile Include="Models\Client\Entity\MU_Icon.cs" />
     <Compile Include="Models\Client\Entity\Users.cs" />
+    <Compile Include="Models\Client\Mapper\IconMapper.cs" />
+    <Compile Include="Models\Client\Mapper\MU_IconMapper.cs" />
     <Compile Include="Models\Client\Mapper\UsersMapper.cs" />
+    <Compile Include="Models\Client\Services\IconService.cs" />
+    <Compile Include="Models\Client\Services\MU_IconService.cs" />
     <Compile Include="Models\Client\Services\ServiceClientLocator.cs" />
     <Compile Include="Models\Client\Services\UsersService.cs" />
+    <Compile Include="Models\Global\Entity\Icon.cs" />
+    <Compile Include="Models\Global\Entity\MU_Icon.cs" />
     <Compile Include="Models\Global\Entity\Users.cs" />
+    <Compile Include="Models\Global\Mapper\IconMapper.cs" />
+    <Compile Include="Models\Global\Mapper\MU_IconMapper.cs" />
     <Compile Include="Models\Global\Mapper\UsersMapper.cs" />
-    <Compile Include="Models\Global\Services\ServiceBase.cs" />
+    <Compile Include="Models\Global\Services\AccessLocator.cs" />
+    <Compile Include="Models\Global\Services\IconService.cs" />
+    <Compile Include="Models\Global\Services\MU_IconService.cs" />
     <Compile Include="Models\Global\Services\ServiceGlobalLocator.cs" />
     <Compile Include="Models\Global\Services\UsersService.cs" />
+    <Compile Include="ViewModels\Application\NavigationVMApp.cs" />
+    <Compile Include="ViewModels\Application\WebsiteApp.cs" />
+    <Compile Include="ViewModels\Application\Web\MarketVM.cs" />
+    <Compile Include="ViewModels\Application\Web\NotFoundVM.cs" />
     <Compile Include="ViewModels\ConnectViewModel.cs" />
     <Compile Include="ViewModels\GameViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
@@ -75,6 +91,15 @@
     <Compile Include="ViewModels\MainViewModels.cs" />
     <Compile Include="ViewModels\NavigationPage.cs" />
     <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Compile Include="Views\Application\NavigatorApp.xaml.cs">
+      <DependentUpon>NavigatorApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Application\Website\Market.xaml.cs">
+      <DependentUpon>Market.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Application\Website\NotFound.xaml.cs">
+      <DependentUpon>NotFound.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ConnectView.xaml.cs">
       <DependentUpon>ConnectView.xaml</DependentUpon>
     </Compile>
@@ -107,6 +132,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Style\BoutonStyleDesktop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Style\Label.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +149,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Style\TextBoxFormat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Application\NavigatorApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Application\Website\Market.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Application\Website\NotFound.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -170,7 +211,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Img\Background.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ToolBoxSupp\MVVM.csproj">
       <Project>{5DCE0733-CB39-4FAE-BCA9-BBEF441A6946}</Project>
@@ -178,7 +221,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Img\Background.jpg" />
+    <Resource Include="Img\Console.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Img\Icon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\Logs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\Bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Img\Browser-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

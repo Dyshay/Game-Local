@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game.ViewModels.Application;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace Game.ViewModels
             Container.Register<GenerationIP>();
             Container.Register<GameViewModel>();
             Container.Register<ConnectViewModel>();
+            Container.Register<NavigationVMApp>();
         }
         public GenerationIP GenerateIP
         {
@@ -32,5 +34,10 @@ namespace Game.ViewModels
         {
             get { return Container.GetInstance<ConnectViewModel>(); }
         }
+        public NavigationVMApp NavApp
+        {
+            get { return Container.GetInstance<NavigationVMApp>(); }
+        }
+
     }
 }

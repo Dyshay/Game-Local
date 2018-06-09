@@ -4,8 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Game.Views"
+             xmlns:appvm="clr-namespace:Game.ViewModels.Application"
+             xmlns:app="clr-namespace:Game.Views.Application"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type appvm:NavigationVMApp}">
+            <app:NavigatorApp/>
+        </DataTemplate>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -25,7 +32,7 @@
             <Label Grid.Column="3" Content="{Binding Level,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource LabelGame}"/>
         </Grid>
         <Grid Grid.Row="1">
-            
+
         </Grid>
         <Border Grid.Row="2" BorderBrush="White" BorderThickness="1">
             <Grid>
@@ -35,8 +42,36 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="1" Content="" FontFamily="Segoe MDL2 Assets" Foreground="White" FontSize="25" VerticalContentAlignment="Center"/>
-                <Label Grid.Column="2" Content="{Binding Heure,UpdateSourceTrigger=PropertyChanged}" FontSize="25" Foreground="White"/>
+                <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{Binding Heure, StringFormat={}{0:HH:mm:ss}}"  HorizontalAlignment="Center" FontSize="25" Foreground="White"/>
             </Grid>
         </Border>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <DockPanel HorizontalAlignment="Center">
+                <ItemsControl ItemsSource="{Binding IconDesktop}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel Orientation="Horizontal" ItemHeight="150" ItemWidth="150"  >
+                                <Button Height="150" Width="120"  Style="{StaticResource ButtonStyle1}" DockPanel.Dock="Left" Margin="20,0,0,0" Command="{Binding DataContext.IconBtn, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}}" CommandParameter="{Binding Nom}" >
+                                    <StackPanel>
+                                        <Image Source="{Binding Access}" />
+                                        <TextBlock Text="{Binding Nom}" Foreground="White" FontSize="20" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </DockPanel>
+        </Grid>
+        <ContentControl  Grid.Row="1"  Content="{Binding Software}"/>
     </Grid>
 </UserControl>

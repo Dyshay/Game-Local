@@ -45,8 +45,8 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="ToolBox">
-      <HintPath>..\..\..\..\..\..\Cours\WPF\MVVM\DemoFullModel\ToolBox\bin\Debug\ToolBox.dll</HintPath>
+    <Reference Include="ToolBoxNET">
+      <HintPath>..\..\..\..\..\..\..\source\repos\ToolBox\ToolBoxNET\bin\Debug\ToolBoxNET.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -213,12 +213,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Img\Background.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ToolBoxSupp\MVVM.csproj">
-      <Project>{5DCE0733-CB39-4FAE-BCA9-BBEF441A6946}</Project>
-      <Name>MVVM</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Img\Console.png">

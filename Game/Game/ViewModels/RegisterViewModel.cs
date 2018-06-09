@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ToolBoxSupp.Command;
-using ToolBoxSupp.Mediator;
+using ToolBoxNET.MVVM.Command;
+using ToolBoxNET.Pattern.Mediator;
 
 namespace Game.ViewModels
 {

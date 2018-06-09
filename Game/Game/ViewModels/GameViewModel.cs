@@ -11,8 +11,8 @@ using System.Text;
 using System.Threading;
 using System.Windows.Controls;
 using System.Windows.Threading;
-using ToolBoxSupp.Command;
-using ToolBoxSupp.Mediator;
+using ToolBoxNET.MVVM.Command;
+using ToolBoxNET.Pattern.Mediator;
 
 namespace Game.ViewModels
 {
@@ -120,7 +120,7 @@ namespace Game.ViewModels
         private ICommand _IconBtn;
         public ICommand IconBtn
         {
-            get { return _IconBtn ?? (_IconBtn = new RelayCommandParameter((Nom) => IconBtnExec(Nom))); }
+            get { return _IconBtn ?? (_IconBtn = new RelayCommandParam((Nom) => IconBtnExec(Nom))); }
         }
 
         private void IconBtnExec(object Nom)

@@ -6,8 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ToolBox.Connections;
-using ToolBox.Patterns.Repository;
+using ToolBoxNET.Connection.Database;
 
 namespace Game.Models.Global.Services
 {

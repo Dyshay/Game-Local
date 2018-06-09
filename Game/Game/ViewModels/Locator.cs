@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ToolBox.Patterns.Locator;
+using ToolBoxNET.Pattern.Locator;
 
 namespace Game.ViewModels
 {

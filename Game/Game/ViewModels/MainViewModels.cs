@@ -1,10 +1,10 @@
-﻿using ToolBoxSupp.Mediator;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ToolBox.Patterns.MVVM.Commands;
+using ToolBoxNET.MVVM.Command;
+using ToolBoxNET.Pattern.Mediator;
 
 namespace Game.ViewModels
 {

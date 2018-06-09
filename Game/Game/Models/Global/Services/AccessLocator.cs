@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ToolBox.Connections;
-using ToolBox.Patterns.Locator;
+using ToolBoxNET.Connection.Database;
+using ToolBoxNET.Pattern.Locator;
 
 namespace Game.Models.Global.Services
 {
